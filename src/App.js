@@ -1,25 +1,22 @@
 import React from 'react';
-import logo from './logo.svg';
-import './App.css';
+import { Route } from 'react-router-dom';
+import Index from "./Pages/Index";
+import Train from "./Pages/Train";
+import Depot from "./Pages/Depot";
+import Railway from "./Pages/Railway";
+import Photo from "./Pages/Photo";
+import Model from "./Pages/Model";
 
 function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+      <div>
+          <Route path="/" component={Index} exact/>
+          <Route path='/train/:number' component={Train}/>
+          <Route path='/depot/:number' component={Depot}/>
+          <Route path='/photo/:number' component={Photo}/>
+          <Route path='/railway/:number' component={Railway}/>
+          <Route path='/model/:number' component={Model}/>
+      </div>
   );
 }
 
