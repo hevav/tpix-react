@@ -1,5 +1,5 @@
 import React, {useState} from 'react';
-import Input from "../Input/Input";
+import Input from "../Input";
 import TrainPixAPI from "../../API/TrainPixAPI";
 import LanguageManager from "../../API/LanguageManager";
 import './TrainPixSearch.css';
@@ -9,9 +9,8 @@ function TrainPixSearch() {
     const [searchResults, setSearchResults] = useState([]);
 
     function searchAndShowResults(request) {
-        TrainPixAPI.qsearch({name: request}).then((response) => {
-            console.log(response.slice(0, 10));
-            setSearchResults(response.slice(0, 10));
+        TrainPixAPI.search({name: request, count: 10}).then((response) => {
+            setSearchResults(response);
         });
     }
 
@@ -22,12 +21,12 @@ function TrainPixSearch() {
             <div className="searchResults">
                 {
                     searchResults.map((item, id) =>
-                        <Link to={"/train/"+item.vid}>
-                            <div className="searchTrain" key={id}>
+                        <Link to={"/train/"+item.vid} key={id}>
+                            <div className="searchTrain">
                                 <div className={"searchTrainStatus searchTrainStatus" + item.state}/>
                                 <div className="searchTrainDescription">
                                     <div className="searchTrainTrain">{item.num}</div>
-                                    <div className="searchTrainModel">{LanguageManager.getString("model_no_api")}</div>
+                                    <div className="searchTrainModel">{item.dname}</div>
                                 </div>
                             </div>
                         </Link>

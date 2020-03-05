@@ -1,10 +1,10 @@
 import React from 'react';
 
-function Railway() {
+function Author() {
     return (
         <div className="page">
         </div>
     );
 }
 
-export default Railway;
+export default Author;

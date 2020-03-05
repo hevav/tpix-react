@@ -2,7 +2,6 @@
     position: relative;
     display: flex;
     flex-direction: column;
-    z-index: 1;
     justify-content: stretch;
 }
 .searchResults{
@@ -15,6 +14,10 @@
     border-bottom: 5px solid #0e4184;
     border-bottom-left-radius: 5px;
     border-bottom-right-radius: 5px;
+    z-index: 1;
+}
+.searchTrainDescription{
+    width: calc(100% - 7px);
 }
 .searchTrain{
     padding: 10px 15px;
@@ -57,4 +60,17 @@
 }
 .searchTrainStatus9{
     background: #dc3525;
+}
+
+.dark .searchResults{
+    border-color: #444;
+}
+
+.dark .searchResults, .dark .searchTrain{
+    background: #333;
+    color: white;
+}
+
+.dark .searchTrain:hover{
+    background: #444;
 }

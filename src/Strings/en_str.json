@@ -1,4 +1,27 @@
 {
   "type_model": "Type in model...",
-  "model_no_api": "There will be model"
+  "model_no_api": "There will be model",
+  "no_api": "This feature requires API",
+  "loading": "Loading...",
+  "login_input": "Login/E-Mail",
+  "login": "Login",
+  "password": "Password",
+  "nickname": "Nickname",
+  "logout": "Logout",
+  "register": "Register",
+  "author": "Author",
+  "license": "License",
+  "pub_date": "Publication date",
+  "shot_date": "Shot date",
+  "model": "Model",
+  "train": "Train",
+  "railway": "Railway",
+  "depot": "Depot",
+  "builder": "Builder",
+  "built": "Built",
+  "serial": "Serial number",
+  "category": "Category",
+  "status": "Status",
+  "open_full": "Open full",
+  "id": "ID"
 }

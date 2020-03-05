@@ -8,8 +8,12 @@
     top: 0;
     left: 0;
     right: 0;
+    height: 60px;
+    z-index: 1;
 }
-
+.dark .headerLine{
+    background: #222;
+}
 .headerBlock{
     display: flex;
     width: 100%;
@@ -42,6 +46,10 @@
     display: none;
 }
 
+.headerSpacing{
+    margin-top: 60px;
+}
+
 @media (max-width: 720px) {
     .headerButtons, .headerContainer{
         justify-content: center;
@@ -60,13 +68,16 @@
         position: fixed;
         background: #0D47A1;
         top: 58px;
-        bottom: 0;
         left: 0;
         right: 0;
-        flex-direction: column;
+        flex-direction: column-reverse;
         align-items: stretch;
         justify-content: flex-start;
         padding: 15px;
+    }
+
+    .dark .headerButtons{
+        background: #222;
     }
 
     .headerOpened{

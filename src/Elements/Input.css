@@ -7,3 +7,6 @@
     color: white;
     font-size: 14px;
 }
+.dark .input{
+    background: #333;
+}

@@ -2,7 +2,7 @@ import Cookies from 'js-cookie';
 
 let language = Cookies.get("language");
 let strings;
-if(language === undefined) language = "ru";
+if(language === undefined) language = navigator.language;
 switch(language){
     case "ru":
         strings = require('../Strings/ru_str.json');

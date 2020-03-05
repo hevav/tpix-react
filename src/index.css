@@ -1,7 +1,7 @@
 body {
   margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
-    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
+  font-family: 'Ubuntu', -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
+    'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
     sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
@@ -15,4 +15,74 @@ code {
 a{
   color: inherit;
   text-decoration: none;
+  cursor: pointer;
+  display: inline;
+}
+a:hover{
+  color: #999;
+}
+.dark a:hover{
+  color: #ffce00;
+}
+.page{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 100%;
+  min-height: calc(100vh - 89px);
+}
+
+.baseContainer{
+  width: calc(100% - 30px);
+  max-width: 1024px;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  padding: 15px;
+}
+.line-grey, .line-classic{
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.line-grey{
+  background: #0e4184;
+  color: white;
+}
+.dark .line-grey{
+  background: #333;
+}
+.dark .page{
+   background: #444;
+   color: white;
+}
+img{
+  max-width: 100%;
+  display: block;
+  max-height: 100%;
+}
+.image-gallery{
+  width: 100%;
+}
+.image-gallery-image{
+  max-height: none;
+}
+.twoGridContainer{
+  columns: 2;
+  width: calc(100% - 30px);
+  max-width: 1024px;
+}
+@media(min-width: 720px) {
+  .photoContainer {
+    height: calc(100vh - 90px);
+    justify-content: center;
+    align-items: center;
+  }
+}
+
+@media(max-width: 720px) {
+  .twoGridContainer{
+    columns: 1;
+  }
 }
